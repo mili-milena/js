@@ -1,4 +1,4 @@
-const score = 70; 
+const score = 70; // тестовое значение, можно изменять
 let grade;
 
 if (score >= 90 && score <= 100) {
@@ -12,7 +12,7 @@ if (score >= 90 && score <= 100) {
 } else if (score >= 0 && score < 50) {
     grade = 'F';
 } else {
-    grade = 'Неверный балл'; 
+    grade = 'Неверный балл'; // на случай, если балл вне диапазона
 }
 
 console.log(grade);
