@@ -1,4 +1,3 @@
-const score = 95; // тестовое значение, можно изменять
 let grade;
 
 if (score >= 90 && score <= 100) {
@@ -14,5 +13,3 @@ if (score >= 90 && score <= 100) {
 } else {
     grade = 'Invalid';
 }
-
-console.log(grade);
