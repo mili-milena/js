@@ -1,9 +1,7 @@
-// Проверим, что переменная score определена перед использованием
+// Проверяем, что переменная score определена, если нет, присваиваем ей значение
+let score = typeof score !== "undefined" ? score : 45;  // Если score не определена, присваиваем 45
+
 let grade;
-if (typeof score === "undefined") {
-  // Если score не определена, инициализируем её значением по умолчанию
-  score = 0;  // Здесь можно задать любое значение для теста, например, 0 или 45 для теста F.
-}
 
 if (score >= 90 && score <= 100) {
     grade = 'A';
@@ -16,14 +14,7 @@ if (score >= 90 && score <= 100) {
 } else if (score >= 0 && score <= 49) {
     grade = 'F';
 } else {
-    grade = 'Invalid';
+    grade = 'Invalid';  // Если score выходит за пределы 0-100
 }
 
-// Пример использования этой переменной в дальнейшем
-const studentCodeWithoutDeclarations = (0, removeOriginalDeclarations_1.removeOriginalDeclarations)(this.studentCode, ['score']);
-const testCode = `let score = ${score}; ${studentCodeWithoutDeclarations} return grade;`;
-const executeScript = new Function(testCode);
-const gradeResult = executeScript();
-
-// Проверка в тестах Cypress
-(0, local_cypress_1.expect)(gradeResult).to.equal(expectedGrade);
+console.log(grade);  // Выводим результат, например, для тестирования
