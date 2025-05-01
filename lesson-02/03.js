@@ -1,6 +1,6 @@
 let grade;
 
-if (typeof score !== 'undefined') {
+if (typeof score !== 'undefined') { // проверка, существует ли переменная score
     if (score >= 90 && score <= 100) {
         grade = 'A';
     } else if (score >= 80 && score <= 89) {
@@ -14,7 +14,6 @@ if (typeof score !== 'undefined') {
     } else {
         grade = 'Invalid';
     }
-
-    // Обязательный return для Cypress
-    grade;
 }
+
+grade;
