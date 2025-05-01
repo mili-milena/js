@@ -1,7 +1,10 @@
-// Объявление переменной grade только один раз
+// Проверим, что переменная score определена перед использованием
 let grade;
+if (typeof score === "undefined") {
+  // Если score не определена, инициализируем её значением по умолчанию
+  score = 0;  // Здесь можно задать любое значение для теста, например, 0 или 45 для теста F.
+}
 
-// Присваиваем значение переменной grade в зависимости от score
 if (score >= 90 && score <= 100) {
     grade = 'A';
 } else if (score >= 80 && score <= 89) {
@@ -16,14 +19,11 @@ if (score >= 90 && score <= 100) {
     grade = 'Invalid';
 }
 
-// Здесь продолжаем работу с переменной grade, не создавая её заново
+// Пример использования этой переменной в дальнейшем
+const studentCodeWithoutDeclarations = (0, removeOriginalDeclarations_1.removeOriginalDeclarations)(this.studentCode, ['score']);
 const testCode = `let score = ${score}; ${studentCodeWithoutDeclarations} return grade;`;
-
-// Создаем новую функцию с помощью new Function и выполняем её
 const executeScript = new Function(testCode);
-
-// Получаем результат
 const gradeResult = executeScript();
 
-// Проверка результата в Cypress (предположительно)
+// Проверка в тестах Cypress
 (0, local_cypress_1.expect)(gradeResult).to.equal(expectedGrade);
