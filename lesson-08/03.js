@@ -10,5 +10,12 @@
 */
 
 function truncate(str, maxLength) {
-  // your code
+  if (str.length > maxLength) {
+    // Обрезаем строку до maxLength символов и добавляем "..."
+    return str.slice(0, maxLength) + '...';
+  } else {
+    // Если строка короче или равна maxLength, возвращаем её как есть
+    return str;
+  }
 }
+
