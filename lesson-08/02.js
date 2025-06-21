@@ -4,8 +4,14 @@
  */
 
 function isNumeric(str) {
-  // your code
+
+  if (typeof str !== 'string') return false; // если не строка — сразу false
+  // trim убирает пробелы по краям
+  // проверяем, что после преобразования к числу и обратно строка не потеряла смысла
+  return str.trim() !== '' && !isNaN(Number(str));
 }
+
+
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
 // console.log(isNumeric("12.3")) // Ожидаемый результат: true
