@@ -1,4 +1,4 @@
-let sum = 0; 
+/*let sum = 0; 
 let number = 1; 
 
 while (number <= 20) { 
@@ -6,4 +6,4 @@ while (number <= 20) {
     number++; 
 }
 
-console.log(sum);
+console.log(sum);*/
