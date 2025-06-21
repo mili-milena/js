@@ -1,6 +1,4 @@
-const score = 45;
 let grade;
-
 if (score >= 90 && score <= 100) {
   grade = 'A';
 } else if (score >= 80 && score <= 89) {
