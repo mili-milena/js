@@ -1,4 +1,4 @@
-;let grade;
+/*;let grade;
 
 if (score >= 90 && score <= 100) {
   grade = 'A';
@@ -12,4 +12,4 @@ if (score >= 90 && score <= 100) {
   grade = 'F';
 } else {
   grade = 'Invalid score';
-}
+}*/
